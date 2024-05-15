@@ -40,6 +40,10 @@ DIctionary: A Key with a value/key value pair
 List: A Key with multiple values
 Map: A key with multiple key value pairs
 
+#### What is a playbook ?
+* Playbook : A Playbook is a list of plays ( and that's why it always starts with - )
+* Play     : A Play is a list of tasks.
+* Task     : A Task is nothing but an action that we wish to perform
 
 
 

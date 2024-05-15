@@ -1,0 +1,7 @@
+- name : Play1
+  hosts: all                    #Group name in the inventory file
+  tasks: 
+    - name: Printing Hai from task1 of paly1
+      ansible.builtin.debug:
+       msg: "Hai from task1 of play1"
+
