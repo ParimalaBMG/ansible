@@ -9,3 +9,10 @@
       ansible.builtin.debug:
         msg: " Devops from batch55 of play1"
 
+
+- name : Play2
+  hosts: all 
+  tasks: 
+    - name: Printing Hai from task1 of Play2
+      ansible.builtin.debug:
+        msg: "ooooolllaaa: task1 from play2"
