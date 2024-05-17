@@ -43,7 +43,11 @@ Map: A key with multiple key value pairs
 #### What is a playbook ?
 * Playbook : A Playbook is a list of plays ( and that's why it always starts with - )
 * Play     : A Play is a list of tasks.
-* Task     : A Task is nothing but an action that we wish to perform
+* Task     : A Task is nothing but an action that we wish to perfom.
 
+### variables: 
+
+if would like to just print a variable, then it has to be enclosed in double quotes {{variable}}, there is no concept of single quotes.
+and if the variable is present in between the string of words there is no need of giving double quotes.
 
 
