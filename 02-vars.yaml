@@ -1,11 +1,14 @@
 - name: Demo on vars usage
   hosts: all
-  vars:
+  vars:                                                ## Global variables: all the tasks of this play can access the variable.
     URL: play.google.com
   tasks: 
      - name: Printing the variable
        ansible.builtin.debug:
         msg: value of the URL is {{URL}}
-          
 
-  
+     - name: Demo on local variables
+       ansible.builtin.debug:
+        msg: value of the URL is {{URL}}
+       vars:
+          URL: task.google.com
