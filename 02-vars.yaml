@@ -2,6 +2,9 @@
   hosts: all
   vars:                                                ## Global variables: all the tasks of this play can access the variable.
     URL: play.google.com
+  vars_prompt:
+    - name: URNAME
+      prompt: Enter your name  
   tasks: 
      - name: Printing the variable
        ansible.builtin.debug:
@@ -13,9 +16,13 @@
        vars:
           URL: task.google.com
 
-     - name: Demo on local undelated variable
+     #- name: Demo on local undelated variable
+       #i-ansible.builtin.debug:
+        ##msg: value of the CLIURL is {{CLIURL}}
+
+     - name: Demo on prompt variables
        ansible.builtin.debug:
-        msg: value of the CLIURL is {{CLIURL}}
+        msg: Nme of thge person  is {{URNAME}} 
 
  ## ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e CLIURL=cli.google.com 02-vars.yaml
 
