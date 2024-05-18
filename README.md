@@ -55,3 +55,8 @@ no two tasks can have the same name.
 
 
 true or false, yes or no :boolians
+
+## What is a fact?
+
+In ansible, fact is the property of the node mentioned in the inventory file. by default ansible is going to collect all the facts of all the machines in the inventory file.
+
