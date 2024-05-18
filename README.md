@@ -52,3 +52,6 @@ and if the variable is present in between the string of words there is no need o
 
 no two tasks can have the same name.
 
+
+
+true or false, yes or no :boolians

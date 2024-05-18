@@ -2,6 +2,8 @@
   hosts: all
   vars:                                                ## Global variables: all the tasks of this play can access the variable.
     URL: play.google.com
+  vars_files:
+    - dev.yaml  
   vars_prompt:
     - name: URNAME
       prompt: Enter your name  
@@ -23,6 +25,10 @@
      - name: Demo on prompt variables
        ansible.builtin.debug:
         msg: Nme of thge person  is {{URNAME}} 
+
+     - name: This is env specific
+       ansible.builtin.debug:
+        msg: Type of instance to be used is {{INS_TYPE}}    
 
  ## ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e CLIURL=cli.google.com 02-vars.yaml
 
