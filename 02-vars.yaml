@@ -12,3 +12,20 @@
         msg: value of the URL is {{URL}}
        vars:
           URL: task.google.com
+
+     - name: Demo on local undelated variable
+       ansible.builtin.debug:
+        msg: value of the CLIURL is {{CLIURL}}
+
+ ## ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e CLIURL=cli.google.com 02-vars.yaml
+
+## if we try to print a variable that is not declared it will throw an error.
+
+
+## Variable precedence:
+
+##when compared to global variables, local variables will have priority. command line variables will have high priority than local variables.
+
+
+
+
