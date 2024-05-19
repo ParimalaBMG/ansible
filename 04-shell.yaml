@@ -6,6 +6,6 @@
       register: OUT
 
     - name: printing the uptime
-      ansible.builtin.debug
-         mes: "{{OUT.stdout}}"
+      ansible.builtin.debug:
+        mes: "{{OUT.stdout}}"
     
