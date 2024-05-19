@@ -7,5 +7,5 @@
 
     - name: printing the uptime
       ansible.builtin.debug:
-        mes: "{{OUT.stdout}}"
+        mes: "{{OUT}}"
     
