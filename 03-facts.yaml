@@ -1,5 +1,6 @@
 - name: Demo on facts
   hosts: all
+  ##gather_facts: no  if you dont need facts to be gathered we can mention has "no"
   
   tasks: 
      - name: Printing the default variable

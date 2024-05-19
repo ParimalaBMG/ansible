@@ -1,0 +1,11 @@
+- name: Demo on facts
+  hosts: all
+  tasks:
+    - name: Running uptime command
+      ansible.builtin.shell: uptime
+      register: OUT
+
+    - name: printing the uptime
+      ansible.builtin.debug
+         mes: "{{OUT.stdout}}"
+    
