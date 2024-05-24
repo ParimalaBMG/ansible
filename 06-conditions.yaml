@@ -22,3 +22,28 @@
       ansible.builtin.debug:
         mes: Action is variable is declared
       when: action is not defined
+
+
+
+
+     - name: This is a backend task
+       ansible.builtin.debug:
+        msg: Installing backend
+      tags: backend   
+    
+     - name: starting backend
+       ansible.builtin.debug:
+        msg: starting backend
+      tags: backend     
+
+
+     - name: This is a db task
+       ansible.builtin.debug:
+        msg: Installing db
+      tags: db    
+
+    
+     - name: starting db
+       ansible.builtin.debug:
+        msg: starting db
+      tags: db   
