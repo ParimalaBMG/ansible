@@ -10,7 +10,7 @@
      - name: starting frontend
        ansible.builtin.debug:
         msg: starting frontend
-      tags: frontend   
+      tags: frontend 
 
      - name: This is a backend task
        ansible.builtin.debug:
