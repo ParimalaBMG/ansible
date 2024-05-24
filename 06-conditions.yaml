@@ -16,4 +16,9 @@
     - name: Run this action
       ansible.builtin.debug:
         mes: Action is true
-      when: action  
+      when: action
+
+    - name: Run this task when the variable is declared
+      ansible.builtin.debug:
+        mes: Action is variable is declared
+      when: action is not defined
