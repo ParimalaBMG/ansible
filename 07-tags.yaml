@@ -21,3 +21,5 @@
        ansible.builtin.debug: 
         msg: starting backend
        tags: backend 
+
+ #ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 07-tags.yaml -t backend      
