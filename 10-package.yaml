@@ -1,0 +1,9 @@
+- name: Demo on installing package
+  hosts: all
+  become : yes
+  tasks:
+    - name : Installing Nginx
+      ansible.builtin.debug:
+         name: nginx
+         state: present
+  
