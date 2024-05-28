@@ -4,9 +4,9 @@
     - name: demo on using loops
       ansible.builtin.debug
         msg: "value is {{item}}"          ## item is a keyword in the list
-      loop : 
-          - 100
-          - 200
-          - 300
-          - 400
+      loop:
+          - Maya
+          - Pinky
+          - siddhu
+          - laddu
 
