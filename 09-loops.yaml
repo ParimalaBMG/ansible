@@ -1,0 +1,12 @@
+- name: Demo on loops
+  hosts: all
+  tasks:
+    - name: demo on using loops
+      ansible.builtin.debug
+        msg: "value is {{item}}"          ## item is a keyword in the list
+      loop : 
+          - Maya
+          - Pinky
+          - siddhu
+          - aadhvik
+            
