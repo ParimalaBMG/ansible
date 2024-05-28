@@ -3,10 +3,10 @@
   tasks:
     - name: demo on using loops
       ansible.builtin.debug
-        msg: "value is {{item}}"          ## item is a keyword in the list
+        msg: "Value is {{item}}"        ## item is a keyword in the list
       loop:
-          - Maya
-          - Pinky
-          - siddhu
-          - laddu
+        - Maya
+        - Pinky
+        - siddhu
+        - laddu
 
