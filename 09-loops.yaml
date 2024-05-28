@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: demo on using loops
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: "Value is {{item}}"        ## item is a keyword in the list
       loop:
         - Maya
