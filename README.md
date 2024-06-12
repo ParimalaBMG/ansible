@@ -60,3 +60,25 @@ true or false, yes or no :boolians
 
 In ansible, fact is the property of the node mentioned in the inventory file. by default ansible is going to collect all the facts of all the machines in the inventory file.
 
+    $ ansible -i inv all -e ansible_user=centos -e ansible_password=abc@123 -m setup
+
+### Ansible roles:
+helps you in organizing the codes.
+
+roles/
+    common/               # this hierarchy represents a "role"
+        tasks/            #
+            main.yml      #  <-- tasks file can include smaller files if warranted
+        handlers/         #
+            main.yml      #  <-- handlers file
+        templates/        #  <-- files for use with the template resource
+            ntp.conf.j2   #  <------- templates end in .j2
+        files/            #
+            bar.txt       #  <-- files for use with the copy resource
+            foo.sh        #  <-- script files for use with the script resource
+        vars/             #
+            main.yml      #  <-- variables associated with this role
+        defaults/         #
+            main.yml      #  <-- default lower priority variables for this role
+        meta/             #
+            main.yml      #  <-- role dependencies

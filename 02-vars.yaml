@@ -6,7 +6,8 @@
     - dev.yaml 
   vars_prompt:
     - name: URNAME
-      prompt: Enter your name  
+      prompt: Enter your name
+      private: false  
   tasks: 
      - name: Printing the variable
        ansible.builtin.debug:
@@ -24,7 +25,7 @@
 
      - name: Demo on prompt variables
        ansible.builtin.debug:
-        msg: Nme of thge person  is {{URNAME}} 
+        msg: Nme of the person  is {{URNAME}} 
 
      - name: This is env specific
        ansible.builtin.debug:
